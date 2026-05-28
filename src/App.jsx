@@ -4,10 +4,12 @@ import { ArrowUpRight, CheckCircle2, MessageCircle, Ruler, Truck } from "lucide-
 
 const TELEGRAM_URL = "https://t.me/omni1x";
 const CHANNEL_URL = "https://t.me/manyoriginal";
+
 const DROP_OPTIONS = {
   premium: { price: "15€" },
   basic: { price: "6€" },
 };
+
 const LOGO_PATH = "M 441 0 L 438 3 L 430 39 L 422 57 L 413 66 L 400 73 L 374 79 L 367 83 L 369 87 L 391 91 L 407 96 L 415 101 L 425 112 L 429 122 L 430 135 L 428 147 L 421 167 L 401 200 L 389 215 L 375 229 L 349 248 L 331 255 L 322 254 L 295 238 L 280 231 L 257 224 L 239 221 L 176 221 L 151 225 L 121 233 L 110 229 L 94 214 L 72 187 L 55 160 L 42 134 L 32 109 L 21 74 L 13 40 L 10 20 L 7 21 L 3 55 L 3 138 L 6 179 L 6 244 L 1 306 L 1 362 L 4 388 L 9 411 L 16 432 L 26 453 L 36 469 L 59 496 L 80 514 L 100 528 L 135 546 L 161 555 L 179 559 L 194 561 L 234 561 L 265 556 L 301 543 L 324 531 L 341 520 L 362 503 L 378 487 L 403 454 L 420 422 L 426 407 L 435 379 L 445 333 L 454 257 L 454 142 L 457 117 L 462 107 L 472 98 L 484 93 L 512 88 L 518 85 L 518 83 L 514 80 L 480 72 L 469 66 L 461 59 L 454 46 L 447 21 L 445 8 Z M 300 561 L 282 562 L 247 572 L 219 576 L 192 575 L 175 571 L 169 571 L 168 620 L 171 649 L 179 684 L 184 694 L 190 699 L 194 699 L 203 689 L 254 593 L 256 593 L 249 620 L 234 660 L 218 692 L 200 721 L 190 743 L 190 765 L 192 769 L 200 777 L 208 781 L 215 783 L 232 784 L 252 779 L 260 774 L 274 760 L 287 738 L 296 714 L 301 694 L 306 665 L 309 635 L 308 577 L 306 568 L 304 564 Z M 141 560 L 130 561 L 122 568 L 108 595 L 91 645 L 86 665 L 81 699 L 81 730 L 84 745 L 89 756 L 100 768 L 105 771 L 123 776 L 142 775 L 157 769 L 165 761 L 169 753 L 170 734 L 161 684 L 157 648 L 156 613 L 159 567 L 149 562 Z M 390 367 L 391 376 L 387 391 L 379 412 L 368 434 L 347 464 L 328 483 L 304 500 L 279 511 L 262 515 L 244 515 L 238 512 L 238 497 L 250 467 L 267 441 L 290 416 L 320 392 L 354 373 L 380 364 L 385 364 Z M 35 342 L 42 341 L 53 345 L 75 359 L 106 388 L 128 416 L 145 447 L 154 475 L 156 486 L 156 501 L 155 505 L 151 509 L 138 509 L 112 498 L 100 490 L 85 477 L 66 455 L 55 438 L 47 422 L 36 390 L 31 358 L 31 350 Z M 358 652 L 343 647 L 328 647 L 324 650 L 319 678 L 308 722 L 298 750 L 290 766 L 302 769 L 329 769 L 345 766 L 364 757 L 376 744 L 381 734 L 385 719 L 385 694 L 381 679 L 376 669 L 364 656 Z M 58 628 L 42 632 L 33 637 L 23 647 L 18 655 L 11 678 L 11 709 L 17 731 L 26 744 L 35 751 L 48 756 L 66 757 L 73 755 L 67 721 L 68 686 L 74 656 L 82 631 L 69 628 Z";
 
 const copy = {
@@ -33,11 +35,6 @@ const copy = {
     basicDesc: "Cheaper blank, simple everyday version. Good if you want the design for less.",
     selected: "selected",
     selectedOption: "Selected option",
-    galleryTitle: "Product photos",
-    galleryNote: "Photo slots are ready. Replace them with real tee photos when you have them.",
-    photoFront: "Front",
-    photoFit: "Fit pic",
-    photoDetail: "Logo detail",
     howTitle: "How to order",
     howSteps: ["Choose quality", "Pick your size", "Send request in Telegram"],
     sizeTitle: "Size guide",
@@ -69,11 +66,8 @@ const copy = {
     upcomingName: "Next MANY piece",
     upcomingText: "The second drop is not open yet. This block is only a small preview so people know something new is coming after Drop 001.",
     upcomingStatus: "coming soon",
-    channelTitle: "Підпишись на канал дропів",
-    channelText: "Усі новини, інформація про наявність і майбутні релізи будуть у Telegram-каналі MANY.",
-    openChannel: "Відкрити канал",
     channelTitle: "Follow the drop channel",
-    channelText: "All drop news, restock info and future releases will be posted in the MANY Telegram channel.",
+    channelText: "Drop news, stock updates and future releases will be posted in the MANY Telegram channel.",
     openChannel: "Open channel",
   },
   uk: {
@@ -98,11 +92,6 @@ const copy = {
     basicDesc: "Дешевша футболка, проста версія на кожен день. Добре, якщо хочеш дизайн дешевше.",
     selected: "обрано",
     selectedOption: "Обраний варіант",
-    galleryTitle: "Фото товару",
-    galleryNote: "Місця під фото вже готові. Коли матимеш реальні фото футболки — просто заміниш placeholder-и.",
-    photoFront: "Спереду",
-    photoFit: "На людині",
-    photoDetail: "Деталь логотипу",
     howTitle: "Як замовити",
     howSteps: ["Обери якість", "Вибери розмір", "Надішли заявку в Telegram"],
     sizeTitle: "Розмірна сітка",
@@ -134,6 +123,9 @@ const copy = {
     upcomingName: "Наступна річ MANY",
     upcomingText: "Другий дроп ще не відкритий. Це лише маленький preview, щоб люди бачили, що після Drop 001 буде щось нове.",
     upcomingStatus: "coming soon",
+    channelTitle: "Підпишись на канал дропів",
+    channelText: "Новини дропів, інформація про наявність і майбутні релізи будуть у Telegram-каналі MANY.",
+    openChannel: "Відкрити канал",
   },
 };
 
@@ -224,37 +216,6 @@ function TeeMockup({ t, selectedQuality }) {
           <div className="mt-3 text-[10px] font-black uppercase tracking-[0.35em]">MANY</div>
         </div>
         <div className="absolute bottom-8 left-1/2 z-20 -translate-x-1/2 whitespace-nowrap rounded-full border border-black/10 px-3 py-1 text-[10px] font-black uppercase tracking-[0.2em] text-black/45">{t.mockup}</div>
-      </div>
-    </div>
-  );
-}
-
-function ProductGallery({ t }) {
-  const photos = [
-    { label: t.photoFront, src: "/drop001-logo.jpg" },
-    { label: t.photoFit, src: "/drop001-fitpic.png" },
-    { label: t.photoDetail, src: "/drop001-closeup.png" },
-  ];
-
-  return (
-    <div className="mt-8">
-      <div className="mb-3 flex flex-col gap-1 sm:flex-row sm:items-end sm:justify-between">
-        <div className="text-[11px] font-black uppercase tracking-[0.2em] text-zinc-500">{t.galleryTitle}</div>
-        <div className="text-xs text-zinc-600">{t.galleryNote}</div>
-      </div>
-      <div className="grid gap-3 sm:grid-cols-3">
-        {photos.map((photo) => (
-          <div key={photo.label} className="group overflow-hidden rounded-2xl border border-white/10 bg-black/40">
-            <img
-              src={photo.src}
-              alt={`MANY Drop 001 ${photo.label}`}
-              className="h-52 w-full object-cover transition duration-500 group-hover:scale-105 sm:h-60"
-            />
-            <div className="border-t border-white/10 px-4 py-3 text-[10px] font-black uppercase tracking-[0.22em] text-zinc-500">
-              {photo.label}
-            </div>
-          </div>
-        ))}
       </div>
     </div>
   );
@@ -392,7 +353,7 @@ function UpcomingDrop({ t }) {
 function ChannelCTA({ t }) {
   return (
     <section className="relative z-10 mx-auto max-w-6xl px-4 pb-8 pt-4 sm:px-6 lg:px-8">
-      <div className="flex flex-col gap-4 rounded-[2rem] border border-white/10 bg-white text-black p-5 sm:flex-row sm:items-center sm:justify-between sm:p-6">
+      <div className="flex flex-col gap-4 rounded-[2rem] border border-white/10 bg-white p-5 text-black sm:flex-row sm:items-center sm:justify-between sm:p-6">
         <div>
           <h3 className="text-3xl font-black uppercase tracking-[-0.07em]">{t.channelTitle}</h3>
           <p className="mt-2 max-w-2xl text-sm leading-7 text-black/60">{t.channelText}</p>
@@ -529,7 +490,6 @@ export default function ManyLandingPage() {
               </div>
               <h3 className="text-4xl font-black uppercase leading-none tracking-[-0.08em] sm:text-6xl">{t.dropTitle}</h3>
               <p className="mt-6 max-w-2xl text-base leading-8 text-zinc-300">{t.dropText}</p>
-              <ProductGallery t={t} />
               <QualitySelector t={t} selectedQuality={selectedQuality} setSelectedQuality={setSelectedQuality} />
               <div className="mt-8 grid gap-3 sm:grid-cols-3">
                 {[[t.price, selectedPrice], [t.status, t.statusValue], [t.payment, t.paymentValue]].map(([label, value]) => (
