@@ -230,7 +230,11 @@ function TeeMockup({ t, selectedQuality }) {
 }
 
 function ProductGallery({ t }) {
-  const photos = [t.photoFront, t.photoFit, t.photoDetail];
+  const photos = [
+    { label: t.photoFront, src: "/drop001-logo.jpg" },
+    { label: t.photoFit, src: "/drop001-fitpic.png" },
+    { label: t.photoDetail, src: "/drop001-closeup.png" },
+  ];
 
   return (
     <div className="mt-8">
@@ -240,8 +244,15 @@ function ProductGallery({ t }) {
       </div>
       <div className="grid gap-3 sm:grid-cols-3">
         {photos.map((photo) => (
-          <div key={photo} className="flex min-h-32 items-center justify-center rounded-2xl border border-white/10 bg-black/40 text-center text-[10px] font-black uppercase tracking-[0.22em] text-zinc-600">
-            {photo}
+          <div key={photo.label} className="group overflow-hidden rounded-2xl border border-white/10 bg-black/40">
+            <img
+              src={photo.src}
+              alt={`MANY Drop 001 ${photo.label}`}
+              className="h-52 w-full object-cover transition duration-500 group-hover:scale-105 sm:h-60"
+            />
+            <div className="border-t border-white/10 px-4 py-3 text-[10px] font-black uppercase tracking-[0.22em] text-zinc-500">
+              {photo.label}
+            </div>
           </div>
         ))}
       </div>
